@@ -1,0 +1,97 @@
+/*============= Global ==============*/
+html {
+  --color-background-page: rgb(190, 190, 190);
+  --color-background: linear-gradient(180deg, rgba(248,199,200,1) 0%, rgba(250,193,194,1) 25%, rgba(254,182,184,1) 50%, rgba(255,178,180,1) 75%, rgba(220,147,156,1) 100%);
+
+  --color-background-two: linear-gradient(180deg, rgba(222,214,255,1) 0%, rgba(243,226,232,1) 33%, rgba(247,236,240,0.94) 66%, rgba(255,255,255,1) 100%);
+
+
+  --color-primary: #8468f5;
+  --color-primary-gradient-X: linear-gradient(90deg, rgba(132,104,245,1) 0%, rgba(236,116,231,1) 100%);
+  --color-primary-gradient-Y: linear-gradient(90deg, rgba(132,104,245,1) 0%, rgba(236,116,231,1) 100%);
+  --color-black: #1d1c24;
+  --color-white: rgb(245, 245, 245) ;
+  --color-font: #52575c;
+  
+  /*--color-primari: rgba(255, 179, 132, .9);*/
+  /*--color-primari: rgb(228, 96, 8);*/
+}
+
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: border-box; }
+h1, h2, h3, p { padding: 0; margin: 0; }
+li { list-style: none; padding: 0; display: inline;}
+ul { padding: 0; }
+
+
+:root { font-size: 10px; }
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: var(--color-background);
+
+  font-size: 1.6rem;
+  font-family: 'Lexend', sans-serif;
+
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+
+  padding: 30px 60px;
+}
+
+.sr-only { /* esconde textos e itens de uso semantico para leitores de tela */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/*============= Header ==============*/
+header {
+  /*background-color: brown;*/
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.logo-container {
+  justify-self: left;
+  width: 8rem;
+  position: relative;
+}
+.logo {
+ width: 100%;
+}
+
+.menu {
+  /*background-color: burlywood;*/
+}
+
+.menu {
+  justify-self: right;
+}
+
+/*============= Main ==============*/
+main {
+  /*background-color: rgb(115, 218, 221);*/
+}
+
+section {
+  width: 50%;
+  /*background-color: blue;*/
+}
+/*============= Footer ==============*/
+footer {
+  /*background-color: rgb(54, 31, 31);*/
+}
+
+.social-media img {
+  width: 3.8rem;
+}
