@@ -39,6 +39,7 @@ body {
 
   /*position: relative;*/
   display: grid;
+  row-gap: 8rem;
   grid-template-rows: auto 1fr auto;
   justify-content: center;
 
@@ -48,7 +49,7 @@ body::before {
   content: '';
   background-image: url(./svg/Strip-Patterns.svg);
   /*background-size: 140% ;*/
-  background-repeat: no-repeat;
+  /*background-repeat: no-repeat;*/
   display: block;
   position: absolute;
   left: 0rem;
@@ -75,17 +76,13 @@ body::before {
 
 /*============= Header ==============*/
 header {
-  /*background-color: brown;*/
-  
   display: grid;
   grid-template-columns: 10rem 1fr;
   align-items: center;
 }
 
-.logo-container {
-  justify-self: left;
+.logo-container img {
   width: clamp(3rem, 3rem + 5vw, 8rem);
-  position: relative;
 }
 
 
@@ -115,12 +112,17 @@ main {
   /*background-color: rgb(115, 218, 221);*/
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 section {
-  /*width: 60%;*/
+  max-width: 120rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+section .container {
+  min-width: 35rem;
 }
 
 section h1 {
@@ -134,7 +136,7 @@ section h1 span {
 }
 
 section p {
-  font-size: clamp(1rem, .5rem + 1vw, 1.8rem);
+  font-size: clamp(1rem, .5rem + 2vw, 1.8rem);
   color: var(--color-font);
   margin-bottom: 3rem;
 }
@@ -145,7 +147,7 @@ section .img-container {
 
 section .img-container img {
   max-width: 70rem;
-  width: clamp(30rem, 40rem + 20vw, 80rem);
+  width: 170%;/*clamp(30rem, 40rem + 20vw, 80rem);*/
   position: absolute;
   left: 0;
   top: 50%;
@@ -154,6 +156,7 @@ section .img-container img {
 }
 
 /*============= Imput ==============*/
+
 .input-group {
   width: 90%;
   position: relative;
@@ -216,4 +219,60 @@ footer {
 .social-media img {
   width: 3.8rem;
   cursor: pointer;
+}
+
+
+/*============= Responsive ==============*/
+
+@media (max-width: 700px) {
+
+  header {
+    display: block;
+  }
+
+  header .logo-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  header .menu {
+    display: none;
+  }
+
+
+  section {
+    grid-template-columns: 1fr;
+    width: 80vw;
+  }
+
+  section .container {
+    text-align: center;
+    min-width: auto;
+    padding-bottom: 5rem;
+  }
+  
+
+  section .img-container img {
+    width: 100%;
+    position: relative;
+  }
+
+  form {
+    display: flex;
+    justify-content: center;
+  }
+
+  footer {
+    text-align: center;
+  }
+  
+}
+
+
+
+@media (max-width: 500px) {
+
+  section {
+    width: 90vw;
+  }
 }
