@@ -103,23 +103,36 @@ header {
   font-size: clamp(1rem, .6rem + 1vw, 2rem);
 }
 
-.menu ul li:not(:last-child) {
+.menu ul li {
   margin-right: calc(.6rem + 1vw);
   cursor: pointer;
 }
 
-.menu ul li:not(:last-child):hover {
+.menu ul li:hover {
   color: var(--color-primary);
 }
 
-.menu ul li:not(:last-child).-active {
+.menu ul li.-active {
   padding-bottom: 10px;
   color: var(--color-primary);
   border-bottom: var(--color-primary) 2px solid;
 }
 
+ul .btn.change {
+
+  width: 3rem;
+  height: 3rem;
+
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  background-image: url("./svg/color.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70%;
+}
 .btn.change:hover {
-  background-color: rgb(107, 70, 255);
+  background-color: rgb(166, 144, 255);
 }
 
 /*============= Main ==============*/
@@ -249,10 +262,40 @@ footer {
     justify-content: center;
   }
 
-  header .menu {
-    display: none;
+  header .menu ul {
+    /*display: none;*/
+    position: fixed;
+    right: 0;
+
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+
+    background-color: rgba(49, 49, 49, 0.95);
+    color: var(--color-white);
+
+    font-size: 2rem;
+
+    z-index: 999;
+
   }
 
+  .menu ul li {
+    padding: 1rem;
+    margin-right: 0;
+    width: 90%;
+    text-align: center;
+  }
+
+  .menu ul .btn.change {
+    position: relative;
+    left: 0;
+    top: 1rem;
+  }
 
   section {
     grid-template-columns: 1fr;

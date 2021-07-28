@@ -1,14 +1,15 @@
 
-const selectElement = {
+const app = {
 
   $menu: document.querySelectorAll(".menu ul li"),
+  $colorButton: document.querySelector(".btn.change"),
 
   elementClick() {
-    selectElement.$menu.forEach(element => {
+    app.$menu.forEach(element => {
       element.addEventListener("click", (event) => {    
-        selectElement.$menu = document.querySelectorAll(".menu ul li")
+        app.$menu = document.querySelectorAll(".menu ul li")
     
-        selectElement.$menu.forEach(element => {
+        app.$menu.forEach(element => {
           element.classList.remove("-active")
         });
     
@@ -16,10 +17,20 @@ const selectElement = {
         $elementActive.classList.add("-active")
       })
     })
+  },
+
+  colorChange() {
+    app.$colorButton.addEventListener("click", () => {
+      $root = document.querySelector("html")
+      $root.classList.toggle("-color-two")
+    })
   }
+
   
 }
-selectElement.elementClick()
+
+app.elementClick()
+app.colorChange()
 
 
 
