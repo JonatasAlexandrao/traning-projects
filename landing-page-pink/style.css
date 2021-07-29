@@ -79,7 +79,7 @@ body::before {
   border: none;
   border-radius: 2.5rem;
   color: var(--color-white);
-  background-color: var(--color-primary);
+  background-color: #a793f8;
   font-weight: 500;
   cursor: pointer;
   padding: .5rem 1rem;
@@ -103,6 +103,42 @@ header {
   font-size: clamp(1rem, .6rem + 1vw, 2rem);
 }
 
+.menu .menu-hamburger {
+  width: 3rem;
+  height: 2.5rem;
+
+  cursor: pointer;
+
+  display: none;
+ 
+}
+
+.menu .menu-hamburger span{
+  width: 100%;
+  height: .5rem;
+  display: block;
+  border-radius: 2rem;
+  background-color: var(--color-font);
+}
+
+.menu .menu-hamburger::before{
+  content: ''; 
+  display: block;
+  width: 100%;
+  height: .5rem;
+  border-radius: 2rem;
+  background-color: var(--color-font);
+}
+
+.menu .menu-hamburger::after{
+  content: ''; 
+  display: block;
+  width: 100%;
+  height: .5rem;
+  border-radius: 2rem;
+  background-color: var(--color-font);
+}
+
 .menu ul li {
   margin-right: calc(.6rem + 1vw);
   cursor: pointer;
@@ -120,8 +156,8 @@ header {
 
 ul .btn.change {
 
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
 
   position: absolute;
   right: 1rem;
@@ -129,10 +165,10 @@ ul .btn.change {
   background-image: url("./svg/color.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 70%;
+  background-size: 60%;
 }
 .btn.change:hover {
-  background-color: rgb(166, 144, 255);
+  background-color: rgb(222,214,255);
 }
 
 /*============= Main ==============*/
@@ -255,6 +291,7 @@ footer {
 
   header {
     display: block;
+    position: relative;
   }
 
   header .logo-container {
@@ -262,10 +299,20 @@ footer {
     justify-content: center;
   }
 
+  .menu .menu-hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+  }
+  
   header .menu ul {
-    /*display: none;*/
     position: fixed;
-    right: 0;
+    right: -100%;
 
     width: 100vw;
     height: 100vh;
@@ -273,16 +320,21 @@ footer {
     flex-direction: column;
     align-items: center;
 
-
-
     background-color: rgba(49, 49, 49, 0.95);
     color: var(--color-white);
 
     font-size: 2rem;
 
+    transition-property: right;
+    transition-duration: .5s;
+
     z-index: 999;
 
   }
+
+  header .menu ul.-active {
+    right: 0;
+  } 
 
   .menu ul li {
     padding: 1rem;

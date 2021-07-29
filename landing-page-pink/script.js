@@ -24,6 +24,22 @@ const app = {
       $root = document.querySelector("html")
       $root.classList.toggle("-color-two")
     })
+  },
+
+  menuHamburger() {
+    const $menuHamburguer = document.querySelector(".menu .menu-hamburger")
+
+    function toggleMenu(event) {
+      if(event.type === 'touchstart') { 
+        event.preventDefault(); 
+      }
+        
+      const $ul = document.querySelector(".menu ul")
+      $ul.classList.toggle("-active")
+    }
+
+    $menuHamburguer.addEventListener("click", toggleMenu)
+    $menuHamburguer.addEventListener("touchstart", toggleMenu)
   }
 
   
@@ -31,6 +47,7 @@ const app = {
 
 app.elementClick()
 app.colorChange()
+app.menuHamburger()
 
 
 
