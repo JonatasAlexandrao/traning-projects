@@ -3,6 +3,8 @@
 
 @import "./css/colors";
 
+@import "./css/header/header";
+
 
 
 /* font-family: 'Montserrat', sans-serif; 
@@ -23,9 +25,7 @@ font-family: 'Yanone Kaffeesatz', sans-serif; */
 
 
 body {
-  background-color: $color-font;
-  background-color: #1F2326;
-  background-color: $color-black;
+  background-color: rgb(112, 112, 112);
   /*margin: 0;
   width: 100vw;
   height: 100vh;
@@ -55,7 +55,3 @@ body {
   border-width: 0;
 }
 
-
-div{
-  background-color: #8468f5;
-}

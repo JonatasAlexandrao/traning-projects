@@ -3,6 +3,10 @@ html {
           box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+}
+
 *, *::before, *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -23,8 +27,11 @@ ul {
   padding: 0;
 }
 
-div {
-  font-size: 50px;
+#header {
+  width: 100vw;
+  height: 10rem;
+  background-color: #1F2326;
+  position: relative;
 }
 
 /* font-family: 'Montserrat', sans-serif; 
@@ -39,9 +46,7 @@ font-family: 'Yanone Kaffeesatz', sans-serif; */
 }
 
 body {
-  background-color: #1F2326;
-  background-color: #1F2326;
-  background-color: #1d1c24;
+  background-color: #707070;
   /*margin: 0;
   width: 100vw;
   height: 100vh;
@@ -70,9 +75,5 @@ body {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
-}
-
-div {
-  background-color: #8468f5;
 }
 /*# sourceMappingURL=style.css.map */
