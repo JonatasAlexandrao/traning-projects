@@ -1,0 +1,78 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1, h2, h3, p {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+  padding: 0;
+  display: inline;
+}
+
+ul {
+  padding: 0;
+}
+
+div {
+  font-size: 50px;
+}
+
+/* font-family: 'Montserrat', sans-serif; 
+font-family: 'Yanone Kaffeesatz', sans-serif; */
+/*============= Global ==============*/
+:root {
+  font-size: 10px;
+}
+
+.-color-two:root {
+  /* --color-background: linear-gradient(180deg, rgba(222,214,255,1) 0%, rgba(243,226,232,1) 33%, rgba(247,236,240,0.94) 66%, rgba(255,255,255,1) 100%); */
+}
+
+body {
+  background-color: #1F2326;
+  background-color: #1F2326;
+  background-color: #1d1c24;
+  /*margin: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--color-background);
+
+  font-size: clamp(1rem, .8rem + 1vw, 2.5rem);
+  font-family: 'Lexend', sans-serif;
+
+  display: grid;
+  row-gap: 8rem;
+  grid-template-rows: auto 1fr auto;
+  justify-content: center;
+
+  padding: 20px 60px;*/
+}
+
+.sr-only {
+  /* esconde textos e itens de uso semantico para leitores de tela */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+div {
+  background-color: #8468f5;
+}
+/*# sourceMappingURL=style.css.map */
