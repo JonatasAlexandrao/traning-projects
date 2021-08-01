@@ -2,8 +2,66 @@
 
 #header {
   width: 100vw;
-  height: 10rem;
-  background-color: $color-font;
-
+  height: 8rem;
   position: relative;
+  display: grid;
+  grid-template-columns: 18rem 1fr 18rem;
+  //grid-template-rows: 3rem;
+  align-content: center;
+  align-items: center;
+  
+  padding: 2rem 4rem;
+
+  background-color: $color-font;
+  color: $color-white; 
+
+}
+
+.icons-container {
+  position: relative;
+  display: flex;
+  height: 3rem;
+
+  img:first-child {
+    padding-right: 2rem;
+  }
+
+  img:last-child {
+    border-left: 2px solid $color-white;
+    padding-left: 2rem;
+  }
+}
+
+.menu {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+
+  li {
+    cursor: pointer;
+  }
+
+  li:not(:last-child){
+    margin-right: 5rem;
+  }
+
+}
+
+.login-container {
+  display: flex;
+  height: 3rem;
+  justify-self: right;
+  align-items: center;
+
+  img {
+    background-color: rgb(83, 85, 84);
+    border-radius: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+
+    margin-right: 1.2rem;
+    
+  }
+  label {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 1.6rem;
+  }
 }
