@@ -4,6 +4,8 @@
 @import "./css/colors";
 
 @import "./css/header/header";
+@import "./css/main/main";
+@import "./css/footer/footer";
 
 
 
@@ -14,8 +16,7 @@ font-family: 'Yanone Kaffeesatz', sans-serif; */
 :root {
 
   font-size: 10px;
-
-
+  
 }
 
 .-color-two:root {
@@ -26,7 +27,7 @@ font-family: 'Yanone Kaffeesatz', sans-serif; */
 
 body {
   background-color: rgb(112, 112, 112);
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-family: 'Montserrat', sans-serif;
   
 
