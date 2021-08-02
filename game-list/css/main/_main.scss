@@ -6,13 +6,16 @@
   height: 100vh;
 
   
-  background-color: rgb(26, 79, 110);
+  background-color: hsl(202, 62%, 27%);
   /*background-image: url('./img/Hollow-Knight/hollow-knight-background222.png');
   background-size: 100%;
   background-position: center;
   //background-repeat: no-repeat;*/
   
-  
+  background: #0c263f;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, rgb(26, 79, 110), #0c263f);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, rgb(26, 79, 110), #0c263f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   
 }
 

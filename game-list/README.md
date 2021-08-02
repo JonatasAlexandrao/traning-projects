@@ -13,3 +13,9 @@ Jogos inicias:
 
 
 Usado como base os layouts de League of Lagends e Valorant do figma do designer Dmitry Kiiashko (@UnEpicKid)
+
+
+
+
+Site para escolher palheta de cores
+https://coolors.co/palettes/trending
