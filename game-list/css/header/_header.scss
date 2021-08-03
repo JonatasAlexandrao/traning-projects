@@ -12,10 +12,10 @@
   
   padding: 2rem 4rem;
 
-  background-color: $color-font;
+  background-color: $background-bars;
   color: $color-white; 
 
-  
+  z-index: 1;
 
 }
 
@@ -41,6 +41,10 @@
 
   li {
     cursor: pointer;
+
+    &:hover {
+      color: $color-hk-one;
+    }
   }
 
   li:not(:last-child){

@@ -43,6 +43,7 @@ ul {
   padding: 2rem 4rem;
   background-color: #1F2326;
   color: whitesmoke;
+  z-index: 1;
 }
 
 .icons-container {
@@ -69,6 +70,10 @@ ul {
 
 .menu li {
   cursor: pointer;
+}
+
+.menu li:hover {
+  color: #05B2DC;
 }
 
 .menu li:not(:last-child) {
@@ -108,26 +113,10 @@ ul {
 #main {
   width: 100%;
   height: 100vh;
-  background-color: #1a5070;
-  /*background-image: url('./img/Hollow-Knight/hollow-knight-background222.png');
-  background-size: 100%;
-  background-position: center;
-  //background-repeat: no-repeat;*/
-  background: #0c263f;
+  background: #0C263F;
   /* fallback for old browsers */
-  /* Chrome 10-25, Safari 5.1-6 */
   background: -webkit-gradient(linear, left top, left bottom, from(#1a4f6e), to(#0c263f));
   background: linear-gradient(to bottom, #1a4f6e, #0c263f);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-#main::after {
-  content: 'a';
-  display: block;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  background-color: #40a5e0;
 }
 
 #footer {
