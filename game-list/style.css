@@ -25,12 +25,12 @@ li {
 
 ul {
   padding: 0;
+  margin: 0;
 }
 
 #header {
   width: 100%;
   height: 8rem;
-  position: fixed;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 18rem 1fr 18rem;
@@ -111,21 +111,153 @@ ul {
 }
 
 #main {
+  position: relative;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 0 10rem;
+  /*display: grid;
+  grid-template-columns: 70% 30%;*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: #0C263F;
   /* fallback for old browsers */
   background: -webkit-gradient(linear, left top, left bottom, from(#1a4f6e), to(#0c263f));
   background: linear-gradient(to bottom, #1a4f6e, #0c263f);
+  overflow: hidden;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 50rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.card .container-info {
+  position: relative;
+  width: 600px;
+  padding: 2.1rem;
+  background-color: whitesmoke;
+}
+
+.card .container-info .wrapper-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-bottom: 1.5rem;
+}
+
+.card .container-info .text-info {
+  font-size: 1.2rem;
+  padding-bottom: 1.5rem;
+}
+
+.card .container-info .container-details {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 250px 1fr;
+      grid-template-columns: 250px 1fr;
+}
+
+.card .container-info .container-details .wrapper-details-img {
+  position: relative;
+}
+
+.card .container-info .container-details .wrapper-details-img img {
+  width: 300px;
+  position: absolute;
+  left: -80px;
+}
+
+.card .container-info .container-details ul {
+  font-size: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  line-height: 3rem;
+}
+
+.card .container-info .container-details ul h2 {
+  vertical-align: top;
+  padding-bottom: 1.5rem;
+}
+
+.card .card-img {
+  position: absolute;
+  width: 100%;
+  right: -50%;
+  top: 0;
+}
+
+/*.main-img {
+  position: relative;
+
+  img {
+    position: absolute;
+    width: 150%;
+    left: -200px;
+    z-index: 3;
+    //display: none;
+  }
+
+}*/
+.container-tags {
+  width: 100%;
+  height: 10rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  background-color: #1F2326;
+  color: whitesmoke;
+}
+
+.container-tags .box-tag {
+  width: 100%;
+  height: 10rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 2rem;
+      grid-template-rows: 1fr 2rem;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-right: 1px whitesmoke solid;
+}
+
+.container-tags .box-tag img {
+  height: 70%;
 }
 
 #footer {
   width: 100%;
   height: 8rem;
-  position: relative;
   padding: 2rem 4rem;
   background-color: #1F2326;
   color: whitesmoke;
+  z-index: 2;
 }
 
 /* font-family: 'Montserrat', sans-serif; 
@@ -135,30 +267,12 @@ font-family: 'Yanone Kaffeesatz', sans-serif; */
   font-size: 10px;
 }
 
-.-color-two:root {
-  /* --color-background: linear-gradient(180deg, rgba(222,214,255,1) 0%, rgba(243,226,232,1) 33%, rgba(247,236,240,0.94) 66%, rgba(255,255,255,1) 100%); */
-}
-
 body {
+  position: relative;
   background-color: #707070;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-family: 'Montserrat', sans-serif;
-  /*font-size: clamp(1rem, .8rem + 1vw, 2.5rem);
-  /*margin: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  background: var(--color-background);
-
-  font-size: clamp(1rem, .8rem + 1vw, 2.5rem);
-  font-family: 'Lexend', sans-serif;
-
-  display: grid;
-  row-gap: 8rem;
-  grid-template-rows: auto 1fr auto;
-  justify-content: center;
-
-  padding: 20px 60px;*/
+  width: 100%;
 }
 
 h1, h2, h3 {

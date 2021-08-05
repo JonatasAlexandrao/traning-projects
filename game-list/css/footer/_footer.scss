@@ -3,11 +3,12 @@
 #footer {
   width: 100%;
   height: 8rem;
-  position: relative;
    
   padding: 2rem 4rem;
 
   background-color: $background-bars;
   color: $color-white; 
+
+  z-index: 2;
 
 }
