@@ -6,36 +6,34 @@
   min-height: 100vh;
   padding: 0 10rem;
 
-  /*display: grid;
-  grid-template-columns: 70% 30%;*/
-  //align-items: center;
   display: flex;
-  //justify-content: center;
   align-items: center;
+  justify-content: center;
+  /*display: grid;
+  grid-template-columns: 60rem 1fr;
+  align-items: center;
+  justify-content: center;*/
 
   background: $color-hk-tree;      /* fallback for old browsers */
   background: $background-gradiente-hk;
 
-  overflow: hidden;
+  //overflow: hidden;
 
 }
 
 .card{
   position: relative;
-  //overflow: hidden;
+  width: 60rem;
+  max-height: 50rem;
 
-  width: 100%;
-  height: 50rem;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  /*display: grid;
+  grid-template-columns: 60rem 10rem;*/
   
   .container-info {
     position: relative;
-    width: 600px;
-    //height: 50rem;
-    
-    padding: 2.1rem;
+    width: 100%;  
+
+    padding: 3.6rem 3.6rem 10rem;
 
     background-color: $color-white;
 
@@ -56,15 +54,16 @@
     .container-details {
 
       display: grid;
-      grid-template-columns: 250px 1fr;
+      grid-template-columns: 25rem 1fr;
 
       .wrapper-details-img {
         position: relative;              
   
         img {
-          width: 300px;
+          max-width: 30rem;
+          height: 100%;
           position: absolute;
-          left: -80px;
+          left: -7rem;
         }
       }
       
@@ -79,34 +78,10 @@
           padding-bottom: 1.5rem;
         }
       }
-    }
+    }  
   }
 
-  .card-img {
-    position: absolute;
-    width: 100%;
-
-    right: -50%;
-    top: 0;
-
-    //@function: 999;
-
-  }
 }
-
-
-/*.main-img {
-  position: relative;
-
-  img {
-    position: absolute;
-    width: 150%;
-    left: -200px;
-    z-index: 3;
-    //display: none;
-  }
-
-}*/
 
 .container-tags {
   
@@ -124,22 +99,59 @@
   color: $color-white;
 
   .box-tag {
+    position: relative;
     width: 100%;
     height: 10rem;
 
     display: grid;
-    grid-template-rows: 1fr 2rem;
+    grid-template-rows: 7rem 3rem;
 
     justify-items: center;
     align-items: center;
 
-    border-right: 1px $color-white solid;
+    //border-right: 1px $color-white solid;
+
+    &:not(:last-child)::after {
+      content: '';
+      display: block;
+      height: 70%;
+
+      position: absolute;
+      right: 0;
+
+
+      border-right: 1px $color-hk-one solid;
+    }
 
     img {
       height: 70%;
     }
   }
 
+}
+
+
+.container-background-img {
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  //background-color:aquamarine;
+  top: 0;
+  right: -80%;
+  z-index: 9999;
+
+  .background-img {
+    // position: absolute;
+    //height: 100%;
+    width: 100%;
+
+    // left: -30rem;
+    // top: -10rem;
+
+    // z-index: 9999;
+
+  }
 
 }
 
